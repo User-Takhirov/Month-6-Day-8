@@ -1,10 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useGetPhoneDetailQuery } from "../../redux/service/phoneDetail";
+
 export const HomeDetail = () => {
   const { id } = useParams();
   const { data: phoneData } = useGetPhoneDetailQuery(id);
-
+ 
   return (
     <>
       {phoneData && (
@@ -19,6 +20,14 @@ export const HomeDetail = () => {
             <strong>{phoneData.price}</strong>
             <p className="text-[17px]">{phoneData.color}</p>
             <h3 className="font-[700]">{phoneData.brand}</h3>
+            <div>
+              <button
+                
+                className="bg-green-400 p-[10px] w-full mt-[10px] text-white"
+              >
+                Buy
+              </button>
+            </div>
           </div>
         </div>
       )}

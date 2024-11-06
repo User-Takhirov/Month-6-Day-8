@@ -14,6 +14,11 @@ export const CompDetail = () => {
             <strong>{data.price}</strong>
             <p className="text-[17px]">{data.color}</p>
             <h3 className="font-[700]">{data.brand}</h3>
+            <div>
+              <button className="bg-green-400 p-[10px] w-full mt-[10px] text-white">
+                buy
+              </button>
+            </div>
           </div>
         </div>
       )}
